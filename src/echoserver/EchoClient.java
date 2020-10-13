@@ -28,6 +28,8 @@ public class EchoClient {
                 System.out.write(buffer);
             }
 
+            socket.shutdownOutput();
+            System.out.flush();
             socket.close();
 
         } catch (ConnectException ce) {
