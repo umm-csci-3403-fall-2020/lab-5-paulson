@@ -24,8 +24,7 @@ public class EchoClient {
             int response;
             while ((data = System.in.read()) != -1) {
                 output.write(data);
-                response = input.read();
-                System.out.println("Echo:" + response);
+                System.out.write(input.read());
             }
 
             socket.close();
